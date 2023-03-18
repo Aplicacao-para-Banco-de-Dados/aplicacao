@@ -1,6 +1,6 @@
 package Models;
 /**
- *Classe que representa uma Categoria
+ *Classe que representa uma Fornecedor
  * @author David Lucas Flayban
  */
 public class Fornecedor {
@@ -52,10 +52,10 @@ public class Fornecedor {
     }
     /**
      * Metodo setFornecedorID
-     * @param forncedorID atribui um valor a vareavel fornecedorID
+     * @param fornecedorID atribui um valor a vareavel fornecedorID
      */
-    public void setFornecedorID(long forncedorID) {
-        this.fornecedorID = forncedorID;
+    public void setFornecedorID(long fornecedorID) {
+        this.fornecedorID = fornecedorID;
     }
 
     /**
