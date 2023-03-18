@@ -8,8 +8,8 @@ import java.util.Date;
  */
 public class Produto {
     public long produtoID;
-    public Categoria categoria = new Categoria();
-    public Fornecedor fornecedor = new Fornecedor();
+    public Categoria categoria;
+    public Fornecedor fornecedor;
     public String descricao, nome; //elementos multivalorados
     public Date dataDeGarantia;
     public float precoMinimoDeVenda;
@@ -46,10 +46,10 @@ public class Produto {
      * @param precoMinimoDeVenda o PreçoMinimoDeVenda
      * @param statusDoPedido o StatusDoPedido
      */
-    public Produto(long produtoID, long categoriaID, long fornecedorID, String nome, String descricao, Date dataDeGarantia, float precoMinimoDeVenda, String statusDoPedido){
+    public Produto(long produtoID, Fornecedor fornecedor, Categoria categoria, String nome, String descricao, Date dataDeGarantia, float precoMinimoDeVenda, String statusDoPedido){
         this.produtoID = produtoID;
-        this.fornecedor.setFornecedorID(fornecedorID);
-        this.categoria.setCategoriaID(categoriaID);
+        this.categoria = categoria;
+        this.fornecedor = fornecedor;
         this.nome = nome;
         this.descricao = descricao;
         this.dataDeGarantia = dataDeGarantia;
