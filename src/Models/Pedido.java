@@ -2,7 +2,7 @@ package Models;
 
 import java.util.Date;
 /**
- *Classe que representa uma Produto
+ *Classe que representa uma Pedido
  * @author David Lucas Flayban
  */
 public class Pedido {
