@@ -38,8 +38,8 @@ public class Produto {
     /**
      * Construtor com ID
      * @param produtoID o ID do Produto
-     * @param categoriaID o ID da Categoria
-     * @param fornecedorID o ID do Fornecedor
+     * @param categoria o ID da Categoria
+     * @param fornecedor o ID do Fornecedor
      * @param nome o Nome
      * @param descricao a Descrição
      * @param dataDeGarantia a DataDeGarantia
