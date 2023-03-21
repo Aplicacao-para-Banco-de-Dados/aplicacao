@@ -46,4 +46,12 @@ public class ConexaoSQlite {
         }
         return conexao;
     }
+    public static void alterarBD(String query) throws SQLException {
+        Connection bd = ConexaoSQlite.getConexao();
+        Statement stm = bd.createStatement();
+        stm.executeUpdate(query);
+        stm.close();
+    }
 }
+
+
