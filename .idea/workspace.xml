@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19a09bb-f469-41bc-a234-b1d588c89a0a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aplicacao_BD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aplicacao_BD.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/aplicacao_BD/TestesModels/Teste.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConexaoSQlite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aplicacao/bd/ConexaoSQlite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aplicacao/bd/ConexaoSQlite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -100,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679167139389</updated>
-      <workItem from="1679403604506" duration="7323000" />
+      <workItem from="1679403604506" duration="13485000" />
     </task>
     <servers />
   </component>
