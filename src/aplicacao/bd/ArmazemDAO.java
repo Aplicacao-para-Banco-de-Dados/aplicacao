@@ -54,7 +54,7 @@ public abstract class ArmazemDAO implements InterfaceDAO<Armazem> {
                 }
                 return armazems;
             }catch (SQLException e1){
-                System.err.println("Falha ao tentar encontrar a tupla especificada");
+                System.err.println("Falha ao tentar encontrar a tabela Armazem");
             }
         }catch (SQLException e2){
             System.err.println("Não foi possível buscar os dados do banco");

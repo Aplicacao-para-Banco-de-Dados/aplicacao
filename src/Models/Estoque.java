@@ -12,7 +12,7 @@ public class Estoque {
     /**
      * Construtor vazio.
      */
-    public Estoque(){}
+    public Estoque(int estoqueID, int produto, int armazem, int quantidade, int codigo){}
 
     /**
      * Construtor sem ID

@@ -1,7 +1,6 @@
 package aplicacao.bd;
 
 import Models.Estoque;
-import Models.Estoque;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -56,7 +55,7 @@ public abstract class EstoqueDAO implements InterfaceDAO<Estoque> {
                 }
                 return estoques;
             }catch (SQLException e1){
-                System.err.println("Falha ao tentar encontrar a tupla especificada");
+                System.err.println("Falha ao tentar encontrar a tabela Estoque");
             }
         }catch (SQLException e2){
             System.err.println("Não foi possível buscar os dados do banco");
