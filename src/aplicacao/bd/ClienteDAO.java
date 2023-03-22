@@ -34,7 +34,7 @@ public abstract class ClienteDAO implements InterfaceDAO<Cliente> {
     @Override
     public void atualiza(Cliente cliente) {
         try {
-            String query = "UPDATE cliente SET nome = '" + cliente.getNome() + "', DataDeNascimento = '" + cliente.getDataDeNascimento() + "', Pais = '" + cliente.getPais() + "', Estado = '" + cliente.getEstado() + "', Cidade = '" + cliente.getCidade() + "', Email = '" + cliente.getEmail() + "', Telefone = '" + cliente.getTelefone() + "', LimiteDeCredito = '" + cliente.getLimiteDeCredito() + "' WHERE cliente.id = " + cliente.getClienteID();
+            String query = "UPDATE cliente SET nome = '" + cliente.getNome() + "', DataDeNascimento = '" + cliente.getDataDeNascimento() + "', Pais = '" + cliente.getPais() + "', Estado = '" + cliente.getEstado() + "', Cidade = '" + cliente.getCidade() + "', Email = '" + cliente.getEmail() + "', Telefone = '" + cliente.getTelefone() + "', LimiteDeCredito = '" + cliente.getLimiteDeCredito() + "' WHERE cliente.ClienteID = " + cliente.getClienteID();
             ConexaoSQlite.alterarBD(query);
         }catch (SQLException e){
             System.out.println("Não foi possível atualizar a cliente especificado");

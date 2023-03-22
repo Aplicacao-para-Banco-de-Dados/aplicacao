@@ -34,7 +34,7 @@ public abstract class FornecedorDAO implements InterfaceDAO<Fornecedor>{
     @Override
     public void atualiza(Fornecedor fornecedor) {
         try {
-            String query = "UPDATE fornecedor SET nome = '" + fornecedor.getNome() + "', CpfCnpj = '" + fornecedor.getCpfCnpj() + "', TipoDeFornecedor = '" + fornecedor.getTipoDeFornecedor() + "', Localidade = '" + fornecedor.getLocalidade() + "' WHERE cliente.id = " + fornecedor.getFornecedorID();
+            String query = "UPDATE fornecedor SET nome = '" + fornecedor.getNome() + "', CpfCnpj = '" + fornecedor.getCpfCnpj() + "', TipoDeFornecedor = '" + fornecedor.getTipoDeFornecedor() + "', Localidade = '" + fornecedor.getLocalidade() + "' WHERE fornecedor.FornecedorID = " + fornecedor.getFornecedorID();
             ConexaoSQlite.alterarBD(query);
         }catch (SQLException e){
             System.out.println("Não foi possível atualizar o fornecedor especificado");
@@ -50,8 +50,8 @@ public abstract class FornecedorDAO implements InterfaceDAO<Fornecedor>{
             try(ResultSet rs = stm.executeQuery(query)){
                 List<Fornecedor> fornecedores = new ArrayList<Fornecedor>();
                 while (rs.next()){
-                    Fornecedor cliente = new Fornecedor(rs.getInt("FornecedorID"), rs.getString("Nome"), rs.getString("CpfCnpj"), rs.getString("TipoDeFornecedor"), rs.getString("Localidade"));
-                    fornecedores.add(cliente);
+                    Fornecedor fornecedor = new Fornecedor(rs.getInt("FornecedorID"), rs.getString("Nome"), rs.getString("CpfCnpj"), rs.getString("TipoDeFornecedor"), rs.getString("Localidade"));
+                    fornecedores.add(fornecedor);
                 }
                 return fornecedores;
             }catch (SQLException e1){

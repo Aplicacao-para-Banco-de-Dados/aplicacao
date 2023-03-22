@@ -34,7 +34,7 @@ public abstract class CategoriaDAO implements InterfaceDAO<Categoria>{
     @Override
     public void atualiza(Categoria categoria) {
         try {
-            String query = "UPDATE categoria SET nome = '" + categoria.getNome() + "', descricao = '" + categoria.getDescricao() + "' WHERE categoria.id = " + categoria.getCategoriaID();
+            String query = "UPDATE categoria SET nome = '" + categoria.getNome() + "', descricao = '" + categoria.getDescricao() + "' WHERE categoria.CategoriaID = " + categoria.getCategoriaID();
             ConexaoSQlite.alterarBD(query);
         }catch (SQLException e){
             System.out.println("Não foi possível atualizar a categoria especificado");
