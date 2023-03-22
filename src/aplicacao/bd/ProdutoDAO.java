@@ -55,7 +55,7 @@ public abstract class ProdutoDAO implements InterfaceDAO<Produto> {
                 }
                 return produtos;
             }catch (SQLException e1){
-                System.err.println("Falha ao tentar encontrar a tupla especificada");
+                System.err.println("Falha ao tentar encontrar a tabela Produto");
             }
         }catch (SQLException e2){
             System.err.println("Não foi possível buscar os dados do banco");
