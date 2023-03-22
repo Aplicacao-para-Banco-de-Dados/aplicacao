@@ -6,6 +6,6 @@ public class Main {
 
         ConexaoSQlite conexao = new ConexaoSQlite();
         ConexaoSQlite.conectar();
-        ConexaoSQlite.desconectar();
+
     }
 }

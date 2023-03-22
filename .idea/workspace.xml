@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e19a09bb-f469-41bc-a234-b1d588c89a0a" name="Changes" comment="Mudança na atribuição do ID na função atualiza" />
+    <list default="true" id="e19a09bb-f469-41bc-a234-b1d588c89a0a" name="Changes" comment="Correção no Produto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679167139389</updated>
       <workItem from="1679403604506" duration="14379000" />
-      <workItem from="1679520510012" duration="2940000" />
+      <workItem from="1679520510012" duration="3377000" />
     </task>
     <task id="LOCAL-00001" summary="Mudança na atribuição do ID na função atualiza">
       <created>1679523465574</created>
@@ -105,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679523465574</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ligações e Funções do Model Pedido">
+      <created>1679523513570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679523513570</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Correção no Produto">
+      <created>1679523711898</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679523711898</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +141,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Mudança na atribuição do ID na função atualiza" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mudança na atribuição do ID na função atualiza" />
+    <MESSAGE value="Ligações e Funções do Model Estoque" />
+    <MESSAGE value="Ligações e Funções do Model Pedido" />
+    <MESSAGE value="Ligações e Funções do Model Produto" />
+    <MESSAGE value="Correção no Produto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção no Produto" />
   </component>
 </project>
