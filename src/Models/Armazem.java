@@ -11,7 +11,7 @@ public class Armazem {
     /**
      * Construtor vazio.
      */
-    public Armazem(){}
+    public Armazem(int armazemID, String nome, String endereco, int estoque){}
 
     /**
      * Construtor sem ID
