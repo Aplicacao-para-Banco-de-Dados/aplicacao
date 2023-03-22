@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e19a09bb-f469-41bc-a234-b1d588c89a0a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Armazem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Armazem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Estoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Estoque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aplicacao/bd/ArmazemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aplicacao/bd/ArmazemDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aplicacao/bd/CategoriaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aplicacao/bd/CategoriaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aplicacao/bd/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aplicacao/bd/ClienteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aplicacao/bd/FornecedorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aplicacao/bd/FornecedorDAO.java" afterDir="false" />
-    </list>
+    <list default="true" id="e19a09bb-f469-41bc-a234-b1d588c89a0a" name="Changes" comment="Mudança na atribuição do ID na função atualiza" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,8 +96,16 @@
       <option name="presentableId" value="Default" />
       <updated>1679167139389</updated>
       <workItem from="1679403604506" duration="14379000" />
-      <workItem from="1679520510012" duration="2416000" />
+      <workItem from="1679520510012" duration="2940000" />
     </task>
+    <task id="LOCAL-00001" summary="Mudança na atribuição do ID na função atualiza">
+      <created>1679523465574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679523465574</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,5 +121,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Mudança na atribuição do ID na função atualiza" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudança na atribuição do ID na função atualiza" />
   </component>
 </project>
