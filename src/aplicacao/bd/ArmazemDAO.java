@@ -33,7 +33,7 @@ public abstract class ArmazemDAO implements InterfaceDAO<Armazem> {
     @Override
     public void atualiza(Armazem armazem) {
         try {
-            String query = "UPDATE armazem SET nome = '" + armazem.getNome() + "', endereco = '" + armazem.getEndereco() + "', estoque = '" + armazem.getEstoque() + "' WHERE armazem.id = " + armazem.armazemID;
+            String query = "UPDATE armazem SET nome = '" + armazem.getNome() + "', endereco = '" + armazem.getEndereco() + "', estoque = '" + armazem.getEstoque() + "' WHERE armazem.ArmazemID = " + armazem.armazemID;
             ConexaoSQlite.alterarBD(query);
         }catch (SQLException e){
             System.out.println("Não foi possível atualizar o armazém especificado");

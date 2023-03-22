@@ -18,7 +18,7 @@ public class Produto {
     /**
      * Construtor vazio.
      */
-    public Produto(){}
+    public Produto(int produtoID, int categoria, int fornecedor, String descricao, String nome, java.sql.Date dataDeGarantia, float precoMinimoDeVenda, String statusDoPedido){}
 
     /**
      * Construtor sem ID
