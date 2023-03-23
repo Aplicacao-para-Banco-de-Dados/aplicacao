@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         ConexaoSQlite conexao = new ConexaoSQlite();
+        InterfaceDAO dao;
         ConexaoSQlite.conectar();
         int opcao = 99;
         while(opcao != 0 ){
@@ -87,7 +88,7 @@ public class Main {
                             System.out.println("Localidade:\n");
                             localidade = sc.next();
                             Fornecedor f = new Fornecedor(nome,cpfCnpj, tipoFornecedor, localidade);
-                            FornecedorDAO dao = new FornecedorDAO() {
+                            dao = new FornecedorDAO() {
                                 @Override
                                 public void adiciona(Fornecedor fornecedor) {
                                     super.adiciona(fornecedor);
@@ -98,13 +99,14 @@ public class Main {
                         case 2:
                             String nome2, cpfCnpj2, tipoFornecedor2, localidade2;
                             long id;
-                            FornecedorDAO dao2 = new FornecedorDAO() {
+                            dao = new FornecedorDAO() {
                                 @Override
                                 public void atualiza(Fornecedor fornecedor) {
                                     super.atualiza(fornecedor);
                                 }
                             };
-                            dao2.busca();
+
+                            dao.busca();
                             System.out.println("Informe o ID do fornecedor a qual deseja editar:\n");
                             id = sc.nextLong();
                             System.out.println("Informe os dados do fornecedor:\n" +
@@ -117,23 +119,24 @@ public class Main {
                             System.out.println("Localidade:\n");
                             localidade2 = sc.next();
                             Fornecedor f2 = new Fornecedor(id, nome2, cpfCnpj2, tipoFornecedor2, localidade2);
-                            dao2.atualiza(f2);
+                            dao.atualiza(f2);
                             break;
                         case 3:
                             System.out.println("Informe o ID do fornecedor a qual deseja editar:\n");
                             id = sc.nextLong();
                             Fornecedor f3 = new Fornecedor(id, "","","","");
-                            FornecedorDAO dao3 = new FornecedorDAO() {
+                            dao = new FornecedorDAO() {
                                 @Override
                                 public void remove(Fornecedor fornecedor) {
                                     super.remove(fornecedor);
                                 }
                             };
-                            dao3.remove(f3);
+                            dao.remove(f3);
                             break;
                         default:
                             System.out.println("Opção invalida");
                             break;
+
                     }
                     break;
                 case 4:
