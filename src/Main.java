@@ -1,6 +1,7 @@
 import aplicacao.bd.*;
 import Models.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -232,10 +233,28 @@ public class Main {
                     opcao2 = sc.nextInt();
                     switch (opcao2){
                         case 1:
+                            System.out.println("Informe os dados do Armazem que deseja criar:\n" +
+                                    "ID do estoque:\n");
+                            long idEstoque = sc.nextLong();
+                            System.out.println("Nome:\n");
+                            String nome = sc.next();
+                            System.out.println("Esdereço:\n");
+                            String esdereco = sc.next();
                             break;
                         case 2:
+                            System.out.println("Informe o ID do Armazem que deseja editar:\n");
+                            long idArmazem = sc.nextLong();
+                            System.out.println("Informe os novos dados do Armazem:\n" +
+                                    "ID do estoque:\n");
+                            long idEstoque2 = sc.nextLong();
+                            System.out.println("Nome:\n");
+                            String nome2 = sc.next();
+                            System.out.println("Esdereço:\n");
+                            String esdereco2 = sc.next();
                             break;
                         case 3:
+                            System.out.println("Informe o ID do Armazem que deseja editar:\n");
+                            long idArmazem2 = sc.nextLong();
                             break;
                         default:
                             System.out.println("Opção invalida");
@@ -253,10 +272,40 @@ public class Main {
                     opcao2 = sc.nextInt();
                     switch (opcao2){
                         case 1:
+                            System.out.println("Informe os dados para ser criado o pedido:\n");
+                            System.out.println("ID do Produto:\n");
+                            long idProduto = sc.nextLong();
+                            System.out.println("ID do Cliente:\n");
+                            long idCliente = sc.nextLong();
+                            System.out.println("Data do pedido:\n");
+                            Date dataDoPedido = new Date(sc.next());
+                            System.out.println("Data do prazo de entrega:\n");
+                            Date dataDePrazoDaEntrega = new Date(sc.next());
+                            System.out.println("Modo de Encomenda:\n");
+                            String modoDeEncomenda = sc.next();
+                            System.out.println("Status do Pedido:\n");
+                            String statusDoPedido = sc.next();
                             break;
                         case 2:
+                            System.out.println("Informe o ID do Pedido que deseja editar:\n");
+                            long idPedido = sc.nextLong();
+                            System.out.println("Informe os dados para ser criado o pedido:\n");
+                            System.out.println("ID do Produto:\n");
+                            long idProduto2 = sc.nextLong();
+                            System.out.println("ID do Cliente:\n");
+                            long idCliente2 = sc.nextLong();
+                            System.out.println("Data do pedido:\n");
+                            Date dataDoPedido2 = new Date(sc.next());
+                            System.out.println("Data do prazo de entrega:\n");
+                            Date dataDePrazoDaEntrega2 = new Date(sc.next());
+                            System.out.println("Modo de Encomenda:\n");
+                            String modoDeEncomenda2 = sc.next();
+                            System.out.println("Status do Pedido:\n");
+                            String statusDoPedido2 = sc.next();
                             break;
                         case 3:
+                            System.out.println("Informe o ID do Pedido que deseja editar:\n");
+                            long idPedido2 = sc.nextLong();
                             break;
                         default:
                             System.out.println("Opção invalida");
