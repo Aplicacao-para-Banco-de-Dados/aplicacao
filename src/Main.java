@@ -189,11 +189,32 @@ public class Main {
                     opcao2 = sc.nextInt();
                     switch (opcao2){
                         case 1:
+                            System.out.println("Informe os dados do Estoque que deseja criar:\n" +
+                                    "ID do produto desejado:\n");
+                            long idProduto = sc.nextLong();
+                            System.out.println("ID do armazem do Estoque:\n");
+                            long idArmazem = sc.nextLong();
+                            System.out.println("Quantidade de produtos:\n");
+                            int quantidade = sc.nextInt();
+                            System.out.println("Codigo do Estoque:\n");
+                            int codigo = sc.nextInt();
 
                             break;
                         case 2:
+                            System.out.println("Informe o ID do estoque que deseja editar:\n");
+                            long idEstoque = sc.nextLong();
+                            System.out.println("ID do produto desejado:\n");
+                            long idProduto2 = sc.nextLong();
+                            System.out.println("ID do armazem do Estoque:\n");
+                            long idArmazem2 = sc.nextLong();
+                            System.out.println("Quantidade de produtos:\n");
+                            int quantidade2 = sc.nextInt();
+                            System.out.println("Codigo do Estoque:\n");
+                            int codigo2 = sc.nextInt();
                             break;
                         case 3:
+                            System.out.println("Informe o ID do estoque que deseja editar:\n");
+                            long idEstoque2 = sc.nextLong();
                             break;
                         default:
                             System.out.println("Opção invalida");
