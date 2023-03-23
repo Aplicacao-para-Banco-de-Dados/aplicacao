@@ -55,7 +55,7 @@ public abstract class FornecedorDAO implements InterfaceDAO<Fornecedor>{
                 }
                 return fornecedores;
             }catch (SQLException e1){
-                System.err.println("Falha ao tentar encontrar a tupla especificada");
+                System.err.println("Falha ao tentar encontrar a tabela Fornecedor");
             }
         }catch (SQLException e2){
             System.err.println("Não foi possível buscar os dados do banco");

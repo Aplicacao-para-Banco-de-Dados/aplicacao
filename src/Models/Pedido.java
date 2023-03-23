@@ -15,7 +15,7 @@ public class Pedido {
     /**
      * Construtor vazio.
      */
-    public Pedido(){}
+    public Pedido(int pedidoID, int produto, int cliente, java.sql.Date dataDoPedido, java.sql.Date dataDePrazoDaEntrega, String modoDeEncomenda, String statusDoPedido){}
 
     /**
      * Cosntrutor sem ID
