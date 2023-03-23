@@ -27,7 +27,7 @@ public class Main {
             opcao = sc.nextInt();
             int opcao2 = 0;
             switch (opcao){
-                case 1:
+                case 1: // Cliente
                     System.out.println("" +
                             "|    Cliente    |\n" +
                             "-----------------\n" +
@@ -47,7 +47,8 @@ public class Main {
                             break;
                     }
                     break;
-                case 2:
+
+                case 2: // Produto
                     System.out.println("" +
                             "|    Produto    |\n" +
                             "-----------------\n" +
@@ -67,7 +68,8 @@ public class Main {
                             break;
                     }
                     break;
-                case 3:
+
+                case 3: // Fornecedor
                     System.out.println("" +
                             "|  Fornecedor   |\n" +
                             "-----------------\n" +
@@ -139,7 +141,8 @@ public class Main {
 
                     }
                     break;
-                case 4:
+
+                case 4: //Categoria
                     System.out.println("" +
                             "|   Categoria   |\n" +
                             "-----------------\n" +
@@ -149,17 +152,34 @@ public class Main {
                     opcao2 = sc.nextInt();
                     switch (opcao2) {
                         case 1:
+                            String nome, descricao;
+                            System.out.println("Informe os dados da Categoria:\n" +
+                                    "Nome:\n");
+                            nome = sc.next();
+                            System.out.println("Descrição:\n");
+                            descricao = sc.next();
                             break;
                         case 2:
+                            System.out.println("Informe o ID da categoria que deseja editar:\n");
+                            long idFornecedor = sc.nextLong();
+                            String nome2, descricao2;
+                            System.out.println("Informe os dados da Categoria:\n" +
+                                    "Nome:\n");
+                            nome2 = sc.next();
+                            System.out.println("Descrição:\n");
+                            descricao2 = sc.next();
                             break;
                         case 3:
+                            System.out.println("Informe o ID da categoria que deseja excluir:\n");
+                            long idFornecedor2 = sc.nextLong();
                             break;
                         default:
                             System.out.println("Opção invalida");
                             break;
                     }
                     break;
-                case 5:
+
+                case 5: // Estoque
                     System.out.println("" +
                             "|    Estoque    |\n" +
                             "-----------------\n" +
@@ -169,6 +189,7 @@ public class Main {
                     opcao2 = sc.nextInt();
                     switch (opcao2){
                         case 1:
+
                             break;
                         case 2:
                             break;
@@ -179,7 +200,8 @@ public class Main {
                             break;
                     }
                     break;
-                case 6:
+
+                case 6: //Armazem
                     System.out.println("" +
                             "|    Armazem    |\n" +
                             "-----------------\n" +
@@ -199,7 +221,8 @@ public class Main {
                             break;
                     }
                     break;
-                case 7:
+
+                case 7: // Pedido
                     System.out.println("" +
                             "|    Pedidio    |\n" +
                             "-----------------\n" +
