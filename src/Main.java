@@ -12,6 +12,8 @@ public class Main {
         ConexaoSQlite conexao = new ConexaoSQlite();
         InterfaceDAO dao;
         ConexaoSQlite.conectar();
+        ConexaoSQlite.initBD();
+
         int opcao = 99;
         while(opcao != 0 ){
             System.out.println("" +
@@ -76,21 +78,22 @@ public class Main {
                             "-----------------\n" +
                             "|1 - Criar      |\n" +
                             "|2 - Editar     |\n" +
-                            "|3 - Remover    |");
+                            "|3 - Remover    |\n" +
+                            "|4 - Busca    |\n");
                     opcao2 = sc.nextInt();
                     switch (opcao2) {
                         case 1:
                             String nome, cpfCnpj, tipoFornecedor, localidade;
                             System.out.println("Informe os dados do fornecedor para criar:\n" +
-                                    "Nome:\n");
+                                    "Nome:");
                             nome = sc.next();
-                            System.out.println("CPF/CNPJ:\n");
+                            System.out.println("CPF/CNPJ:");
                             cpfCnpj = sc.next();
-                            System.out.println("Tipo de Fornecedor:\n");
+                            System.out.println("Tipo de Fornecedor:");
                             tipoFornecedor = sc.next();
-                            System.out.println("Localidade:\n");
+                            System.out.println("Localidade:");
                             localidade = sc.next();
-                            Fornecedor f = new Fornecedor(nome,cpfCnpj, tipoFornecedor, localidade);
+                            Fornecedor f = new Fornecedor(nome, cpfCnpj, tipoFornecedor, localidade);
                             dao = new FornecedorDAO() {
                                 @Override
                                 public void adiciona(Fornecedor fornecedor) {
@@ -135,6 +138,15 @@ public class Main {
                                 }
                             };
                             dao.remove(f3);
+                            break;
+                        case 4:
+                            dao = new FornecedorDAO() {
+                                @Override
+                                public List<Fornecedor> busca() {
+                                    return super.busca();
+                                }
+                            };
+                            dao.busca();
                             break;
                         default:
                             System.out.println("Opção invalida");

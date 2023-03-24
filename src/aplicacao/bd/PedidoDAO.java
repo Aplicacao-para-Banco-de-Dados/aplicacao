@@ -37,7 +37,7 @@ public abstract class PedidoDAO implements InterfaceDAO<Pedido>{
             String query = "UPDATE pedido SET produto = '" + pedido.getProduto() + "', cliente = '" + pedido.getCliente() + "', DataDoPedido = '" + pedido.getDataDoPedido() + "', DataDePrazoDaEntrega = '" + pedido.getDataDePrazoDaEntrega() + "', ModoDeEncomenda = '" + pedido.getModoDeEncomenda() + "', StatusDoPedido = '" + pedido.getStatusDoPedido() + "' WHERE pedido.PedidoID = " + pedido.getPedidoID();
             ConexaoSQlite.alterarBD(query);
         }catch (SQLException e){
-            System.out.println("Não foi possível atualizar a pedido especificado");
+            System.out.println("Não foi possível atualizar  pedido especificado");
         }
     }
 
