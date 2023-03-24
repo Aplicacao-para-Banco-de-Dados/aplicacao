@@ -36,12 +36,75 @@ public class Main {
                             "|2 - Editar     |\n" +
                             "|3 - Remover    |");
                     opcao2 = sc.nextInt();
+                    Cliente cliente;
                     switch (opcao2) {
                         case 1:
+                            System.out.println("Informe os dados do cliente:\n");
+                            System.out.println("Nome:\n");
+                            String nome = sc.next();
+                            System.out.println("Data de nascimento:\n");
+                            Date dataDeNascimento = new Date(sc.next());
+                            System.out.println("Pais:\n");
+                            String pais = sc.next();
+                            System.out.println("Estado:\n");
+                            String estado = sc.next();
+                            System.out.println("Cidade:\n");
+                            String cidade = sc.next();
+                            System.out.println("Email:\n");
+                            String email = sc.next();
+                            System.out.println("Telefone:\n");
+                            String telefone = sc.next();
+                            System.out.println("Limite de crédito:\n");
+                            float limiteDeCredito = sc.nextInt();
+                            cliente = new Cliente(nome,dataDeNascimento,pais, estado,cidade,email,telefone,limiteDeCredito)
+                            dao = new ClienteDAO() {
+                                @Override
+                                public void adiciona(Cliente cliente) {
+                                    super.adiciona(cliente);
+                                }
+                            };
+                            dao.adiciona(cliente);
                             break;
                         case 2:
+                            dao = new ClienteDAO() {
+                                @Override
+                                public void atualiza(Cliente cliente) {
+                                    super.atualiza(cliente);
+                                }
+                            };
+                            dao.busca();
+                            System.out.println("Informe o ID do cliente que deseja editar:\n");
+                            long idCliente = sc.nextLong();
+                            System.out.println("Nome:\n");
+                            String nome2 = sc.next();
+                            System.out.println("Data de nascimento:\n");
+                            Date dataDeNascimento2 = new Date(sc.next());
+                            System.out.println("Pais:\n");
+                            String pais2 = sc.next();
+                            System.out.println("Estado:\n");
+                            String estado2 = sc.next();
+                            System.out.println("Cidade:\n");
+                            String cidade2 = sc.next();
+                            System.out.println("Email:\n");
+                            String email2 = sc.next();
+                            System.out.println("Telefone:\n");
+                            String telefone2 = sc.next();
+                            System.out.println("Limite de crédito:\n");
+                            float limiteDeCredito2 = sc.nextInt();
+                            cliente = new Cliente(idCliente,nome2,dataDeNascimento2,pais2, estado2,cidade2,email2,telefone2,limiteDeCredito2);
+                            dao.atualiza(cliente);
                             break;
                         case 3:
+                            dao = new ClienteDAO() {
+                                @Override
+                                public void remove(Cliente cliente) {
+                                    super.remove(cliente);
+                                }
+                            };
+                            dao.busca();
+                            System.out.println("Informe o ID do cliente que deseja remover:\n");
+                            long idCliente2 = sc.nextLong();
+                            dao.remove(idCliente2);
                             break;
                         default:
                             System.out.println("Opção invalida");
@@ -59,10 +122,43 @@ public class Main {
                     opcao2 = sc.nextInt();
                     switch (opcao2) {
                         case 1:
+                            System.out.println("Informe os dados do produto:\n");
+                            System.out.println("ID da categoria do produto:\n");
+                            long idCategoria = sc.nextLong();
+                            System.out.println("ID do fornecedor do produto:\n");
+                            long idFornecedor = sc.nextLong();
+                            System.out.println("Nome:\n");
+                            String nome = sc.next();
+                            System.out.println("Descrição:\n");
+                            String descricao = sc.next();
+                            System.out.println("Data da garantia:\n");
+                            Date dataDeGarantia = new Date(sc.next());
+                            System.out.println("Preço minimo de venda:\n");
+                            float precoMinimoDeVenda = sc.nextInt();
+                            System.out.println("Statos do produto:\n");
+                            String statusDoProduto = sc.next();
                             break;
                         case 2:
+                            System.out.println("Informe o ID do produto que deseja editar:\n");
+                            long idProduto = sc.nextLong();
+                            System.out.println("ID da categoria do produto:\n");
+                            long idCategoria2 = sc.nextLong();
+                            System.out.println("ID do fornecedor do produto:\n");
+                            long idFornecedor2 = sc.nextLong();
+                            System.out.println("Nome:\n");
+                            String nome2 = sc.next();
+                            System.out.println("Descrição:\n");
+                            String descricao2 = sc.next();
+                            System.out.println("Data da garantia:\n");
+                            Date dataDeGarantia2 = new Date(sc.next());
+                            System.out.println("Preço minimo de venda:\n");
+                            float precoMinimoDeVenda2 = sc.nextInt();
+                            System.out.println("Statos do produto:\n");
+                            String statusDoProduto2 = sc.next();
                             break;
                         case 3:
+                            System.out.println("Informe o ID do produto que deseja excluir:\n");
+                            long idProduto2 = sc.nextLong();
                             break;
                         default:
                             System.out.println("Opção invalida");
@@ -151,16 +247,32 @@ public class Main {
                             "|2 - Editar     |\n" +
                             "|3 - Remover    |");
                     opcao2 = sc.nextInt();
+                    Categoria categoria;
                     switch (opcao2) {
                         case 1:
+                            dao = new CategoriaDAO() {
+                                @Override
+                                public void adiciona(Categoria categoria) {
+                                    super.adiciona(categoria);
+                                }
+                            };
                             String nome, descricao;
                             System.out.println("Informe os dados da Categoria:\n" +
                                     "Nome:\n");
                             nome = sc.next();
                             System.out.println("Descrição:\n");
                             descricao = sc.next();
+                            categoria = new Categoria(nome, descricao);
+                            dao.adiciona(categoria);
                             break;
                         case 2:
+                            dao = new CategoriaDAO() {
+                                @Override
+                                public void atualiza(Categoria categoria) {
+                                    super.atualiza(categoria);
+                                }
+                            };
+                            dao.busca();
                             System.out.println("Informe o ID da categoria que deseja editar:\n");
                             long idFornecedor = sc.nextLong();
                             String nome2, descricao2;
@@ -169,10 +281,20 @@ public class Main {
                             nome2 = sc.next();
                             System.out.println("Descrição:\n");
                             descricao2 = sc.next();
+                            categoria = new Categoria(idFornecedor, nome2, descricao2);
+                            dao.atualiza(categoria);
                             break;
                         case 3:
+                            dao = new CategoriaDAO() {
+                                @Override
+                                public void remove(Categoria categoria) {
+                                    super.remove(categoria);
+                                }
+                            };
+                            dao.busca();
                             System.out.println("Informe o ID da categoria que deseja excluir:\n");
                             long idFornecedor2 = sc.nextLong();
+                            dao.remove(idFornecedor2);
                             break;
                         default:
                             System.out.println("Opção invalida");
