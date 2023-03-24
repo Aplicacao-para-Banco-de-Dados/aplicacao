@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19a09bb-f469-41bc-a234-b1d588c89a0a" name="Changes" comment="Correção no Produto">
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD/Projeto_BD.db" beforeDir="false" afterPath="$PROJECT_DIR$/BD/Projeto_BD.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aplicacao_BD/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aplicacao_BD/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aplicacao_BD/Models/Armazem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aplicacao_BD/Models/Armazem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aplicacao_BD/Models/Estoque.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aplicacao_BD/Models/Estoque.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aplicacao_BD/Models/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aplicacao_BD/Models/Pedido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aplicacao_BD/Models/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aplicacao_BD/Models/Produto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aplicacao_BD/aplicacao/bd/ConexaoSQlite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/aplicacao_BD/aplicacao/bd/ConexaoSQlite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/aplicacao_BD/aplicacao/bd/interfaceA.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aplicacao/bd/ConexaoSQlite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aplicacao/bd/ConexaoSQlite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +110,7 @@
       <updated>1679167139389</updated>
       <workItem from="1679403604506" duration="14379000" />
       <workItem from="1679520510012" duration="3377000" />
+      <workItem from="1679609900188" duration="5587000" />
     </task>
     <task id="LOCAL-00001" summary="Mudança na atribuição do ID na função atualiza">
       <created>1679523465574</created>
