@@ -56,7 +56,7 @@ public class Main {
                             String telefone = sc.next();
                             System.out.println("Limite de crédito:\n");
                             float limiteDeCredito = sc.nextInt();
-                            cliente = new Cliente(nome,dataDeNascimento,pais, estado,cidade,email,telefone,limiteDeCredito)
+                            cliente = new Cliente(nome,dataDeNascimento,pais, estado,cidade,email,telefone,limiteDeCredito);
                             dao = new ClienteDAO() {
                                 @Override
                                 public void adiciona(Cliente cliente) {
@@ -311,7 +311,14 @@ public class Main {
                             "|3 - Remover    |");
                     opcao2 = sc.nextInt();
                     switch (opcao2){
+                        Estoque estoque;
                         case 1:
+                            dao = new EstoqueDAO() {
+                                @Override
+                                public void adiciona(Estoque estoque) {
+                                    super.adiciona(estoque);
+                                }
+                            };
                             System.out.println("Informe os dados do Estoque que deseja criar:\n" +
                                     "ID do produto desejado:\n");
                             long idProduto = sc.nextLong();
@@ -321,9 +328,17 @@ public class Main {
                             int quantidade = sc.nextInt();
                             System.out.println("Codigo do Estoque:\n");
                             int codigo = sc.nextInt();
-
+                            estoque = new Estoque();
+                            dao.adiciona(estoque);
                             break;
                         case 2:
+                            dao = new EstoqueDAO() {
+                                @Override
+                                public void atualiza(Estoque estoque) {
+                                    super.atualiza(estoque);
+                                }
+                            };
+                            dao.busca();
                             System.out.println("Informe o ID do estoque que deseja editar:\n");
                             long idEstoque = sc.nextLong();
                             System.out.println("ID do produto desejado:\n");
@@ -334,10 +349,20 @@ public class Main {
                             int quantidade2 = sc.nextInt();
                             System.out.println("Codigo do Estoque:\n");
                             int codigo2 = sc.nextInt();
+                            estoque = new Estoque();
+                            dao.atualiza(estoque);
                             break;
                         case 3:
+                            dao = new EstoqueDAO() {
+                                @Override
+                                public void remove(Estoque estoque) {
+                                    super.remove(estoque);
+                                }
+                            };
+                            dao.busca();
                             System.out.println("Informe o ID do estoque que deseja editar:\n");
                             long idEstoque2 = sc.nextLong();
+                            dao.remove(idEstoque2);
                             break;
                         default:
                             System.out.println("Opção invalida");
@@ -346,6 +371,7 @@ public class Main {
                     break;
 
                 case 6: //Armazem
+                    Armazem armazem;
                     System.out.println("" +
                             "|    Armazem    |\n" +
                             "-----------------\n" +
@@ -355,6 +381,12 @@ public class Main {
                     opcao2 = sc.nextInt();
                     switch (opcao2){
                         case 1:
+                            dao = new ArmazemDAO() {
+                                @Override
+                                public void adiciona(Armazem armazem) {
+                                    super.adiciona(armazem);
+                                }
+                            };
                             System.out.println("Informe os dados do Armazem que deseja criar:\n" +
                                     "ID do estoque:\n");
                             long idEstoque = sc.nextLong();
@@ -362,8 +394,17 @@ public class Main {
                             String nome = sc.next();
                             System.out.println("Esdereço:\n");
                             String esdereco = sc.next();
+                            armazem = new Armazem();
+                            dao.adiciona(armazem);
                             break;
                         case 2:
+                            dao = new ArmazemDAO() {
+                                @Override
+                                public void atualiza(Armazem armazem) {
+                                    super.atualiza(armazem);
+                                }
+                            };
+                            dao.busca();
                             System.out.println("Informe o ID do Armazem que deseja editar:\n");
                             long idArmazem = sc.nextLong();
                             System.out.println("Informe os novos dados do Armazem:\n" +
@@ -373,10 +414,20 @@ public class Main {
                             String nome2 = sc.next();
                             System.out.println("Esdereço:\n");
                             String esdereco2 = sc.next();
+                            armazem = new Armazem();
+                            dao.atualiza(armazem);
                             break;
                         case 3:
+                            dao = new ArmazemDAO() {
+                                @Override
+                                public void remove(Armazem armazem) {
+                                    super.remove(armazem);
+                                }
+                            };
+                            dao.busca();
                             System.out.println("Informe o ID do Armazem que deseja editar:\n");
                             long idArmazem2 = sc.nextLong();
+                            dao.remove(idArmazem2);
                             break;
                         default:
                             System.out.println("Opção invalida");
@@ -392,8 +443,15 @@ public class Main {
                             "|2 - Editar     |\n" +
                             "|3 - Remover    |");
                     opcao2 = sc.nextInt();
+                    Pedido pedido;
                     switch (opcao2){
                         case 1:
+                            dao = new PedidoDAO() {
+                                @Override
+                                public void adiciona(Pedido pedido) {
+                                    super.adiciona(pedido);
+                                }
+                            };
                             System.out.println("Informe os dados para ser criado o pedido:\n");
                             System.out.println("ID do Produto:\n");
                             long idProduto = sc.nextLong();
@@ -407,8 +465,17 @@ public class Main {
                             String modoDeEncomenda = sc.next();
                             System.out.println("Status do Pedido:\n");
                             String statusDoPedido = sc.next();
+                            pedido = new Pedido();
+                            dao.adiciona(pedido);
                             break;
                         case 2:
+                            dao = new PedidoDAO() {
+                                @Override
+                                public void atualiza(Pedido pedido) {
+                                    super.atualiza(pedido);
+                                }
+                            };
+                            dao.busca();
                             System.out.println("Informe o ID do Pedido que deseja editar:\n");
                             long idPedido = sc.nextLong();
                             System.out.println("Informe os dados para ser criado o pedido:\n");
@@ -424,10 +491,20 @@ public class Main {
                             String modoDeEncomenda2 = sc.next();
                             System.out.println("Status do Pedido:\n");
                             String statusDoPedido2 = sc.next();
+                            pedido =new Pedido();
+                            dao.atualiza(pedido);
                             break;
                         case 3:
+                            dao= new PedidoDAO() {
+                                @Override
+                                public void remove(Pedido pedido) {
+                                    super.remove(pedido);
+                                }
+                            };
+                            dao.busca();
                             System.out.println("Informe o ID do Pedido que deseja editar:\n");
                             long idPedido2 = sc.nextLong();
+                            dao.remove(idPedido2);
                             break;
                         default:
                             System.out.println("Opção invalida");
